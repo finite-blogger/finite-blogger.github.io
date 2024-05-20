@@ -167,11 +167,11 @@ li a{
 }
 .hl{
     background: #55c1ffe4;
-    padding: 2px;
+    padding: 5px;
     border-radius: 3px;
 }
 .demo{
-    height: 70px;
+    
     padding: 15px;
     margin: 5px;
     border-radius: 10px;
