@@ -168,8 +168,8 @@ li a{
 .hl{
     background: #55c1ffe4;
     font-family: "Roboto Condensed", sans-serif;
-    padding:7px;
-    border-radius:10px;
+    padding: 2px;
+    border-radius: 3px;
 }
 .demo{
     
