@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>Finite Blogger</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bangers&family=Lobster&family=Poetsen+One&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+   <li onclick="hideSidebar()"><a href="#"><img src="image/close.svg" alt="">
+</a></li>         
+   <li class="boxed"><a href="about.html">About</a></li>
+   <li class="boxed"><a href="contact.html">Contact</a></li>
+   
+    
+    <li><a href="https://x.com/finite2001?s=09"><img src="image/twitterx.png">Twitter</a></li>
+ <li><a href="https://t.me/finite_blogger"><img src="image/telegram.png">Telegram</a></li>
+ <li><a href="https://discord.com/invite/xTxA6dYx"><img src="image/discord.png">Discord</a></li>
+  
+    <li><a href="terms.html">Terms</a></li>
+   
+        </ul>
+        <ul>
+   <li><a href="#">Home</a></li>
+   
+   <li onclick="showSidebar()" class="hideOnDesktop"><a href="#"><img src="image/menu.svg" alt=""></a></li>    
+
+<li class="hideOnMobile"><a href="about.html">About</a></li>
+   <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+   
+    <li class="hideOnMobile" ><a href="#">
+</a></li>    
+    
+   
+        </ul>
+ 
+    </nav>
+     <h1>Finite Blogger</h1> 
+     
+       <input type="text" id="searchBar" placeholder="Search...">
+  <button class="btn" id="clearBtn">Clear</button>
+  <ul id="itemsList">
+      
+  </ul>
+                  
+        
+   <script>
+       function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+        function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+        }
+        
+   </script>
+   <script type="module" src="script.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>How to add images to an html website</title>
+    
+        <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bangers&family=Lobster&family=Poetsen+One&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+    <nav>
+        <ul class="sidebar">
+   <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+</a></li>         
+   <li class="boxed"><a href="about.html">About</a></li>
+   <li class="boxed"><a href="contact.html">Contact</a></li>
+   
+    
+    <li><a href="https://x.com/finite2001?s=09"><img src="image/twitterx.png"> <p>twitter</p></a></li>
+   <li> <a href="https://t.me/finite_blogger"><img src="image/telegram.png"> <p>telegram</p></a></li>
+   <li> <a href="https://discord.com/invite/xTxA6dYx"><img src="image/discord.png"> <p>discord</p></a></li>
+   
+    <li><a href="terms.html">Terms</a></li>
+   
+   
+        </ul>
+        <ul>
+   <li><a href="index.html">Home</a></li>
+   
+   <li onclick="showSidebar()" class="hideOnDesktop"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+</a></li>    
+
+<li class="hideOnMobile"><a href="about.html">About</a></li>
+   <li class="hideOnMobile"><a href="#">Contact</a></li>
+   
+    
+    
+   
+        </ul>
+ 
+    </nav>
+    
+   <!-- BLOG CONTENT --> 
+    
+    <div class="blogContent">
+        <h2>How to add images to an HTML website</h2>
+        <p>Images are a very important part of a website. They make your website more visually appealing to visitors.</p>
+        <p>
+            Images can be added to HTML code using the <b class="hl"><i><</i><i>img</i><i>></i></b>tag and the <b class="hl"><i>src=" "</i></b attribute.</p>
+           <p> First make sure you have your image in an images folder and then use the <b class="hl"><i>src=" "</i></b> attribute to get the file path of the image.
+        </p>
+        
+        <div class="demo">
+          <i><</i> <i class="tag">img</i> <br> <i class="att">src</i> <i class="value"> = "folder/image_name.file_extension" </i><br>
+          <i>></i>
+        </div> 
+        <p>
+            For images, the supported file extensions are jpg, jpeg and png.
+        </p>
+        <p>
+            The images can be styled with CSS for example you can change the size, border, opacity and so on.
+        </p>
+        <div class="demo">
+ <i class="tag">img</i> <i>{</i><br>
+ <i class="att">height</i><i>:</i> <i class="value">500px</i><i>;</i><br>
+ <i class="att">width</i><i>:</i> <i class="value">300px</i><i>;</i><br>
+ <i class="att">border-radius</i><i>:</i> <i class="value">20px</i><i>;</i><br>
+ <i>}</i>
+            
+        </div>
+        <div>
+            <img src="image/img1.jpg" style=" margin: 30px; height: 500px; width: 300px; border-radius: 20px; ">
+        </div>
+       
+    </div>
+    <!-- The End -->
+    
+    <div class="footer">
+        <p>If you have any issues, feel free to <a href="contact.html">contact me</a>.</p>
+    </div>
+    
+    
+    
+    <script>
+        function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+        function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+        }
+        
+        
+   </script>
+   </body>
+</html>

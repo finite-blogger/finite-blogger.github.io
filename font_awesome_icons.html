@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>How to add font awesome icons to an html website</title>
+    
+        <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bangers&family=Lobster&family=Poetsen+One&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .fa-house{
+    color: whitesmoke;
+    margin: 30px;
+    font-size:100px;
+}
+</style>
+</head>
+<body>
+    
+    <nav>
+        <ul class="sidebar">
+   <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+</a></li>         
+   <li class="boxed"><a href="about.html">About</a></li>
+   <li class="boxed"><a href="contact.html">Contact</a></li>
+   
+    
+    <li><a href="https://x.com/finite2001?s=09"><img src="image/twitterx.png"> <p>twitter</p></a></li>
+   <li> <a href="https://t.me/finite_blogger"><img src="image/telegram.png"> <p>telegram</p></a></li>
+   <li> <a href="https://discord.com/invite/xTxA6dYx"><img src="image/discord.png"> <p>discord</p></a></li>
+   
+    <li><a href="terms.html">Terms</a></li>
+   
+        </ul>
+        <ul>
+   <li><a href="index.html">Home</a></li>
+   
+   <li onclick="showSidebar()" class="hideOnDesktop"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+</a></li>    
+
+<li class="hideOnMobile"><a href="about.html">About</a></li>
+   <li class="hideOnMobile"><a href="#">Contact</a></li>
+   
+    
+    
+   
+        </ul>
+ 
+    </nav>
+    
+   <!-- BLOG CONTENT --> 
+    
+    <div class="blogContent">
+        <p>
+            Font awesome is a design library for adding icons to web apps. 
+        </p>
+        <p>First off you're going to need to paste the link below in your head tag.</p>
+        <div class="demo">
+       <i><</i><i class="tag">link</i> <i class="att">rel</i><i class="value">="stylesheet"</i> <i class="att">href</i><i class="value">="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/all.min.css"</i>   
+    <i class="att">integrity</i><i class="value">="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="</i> <i class="att">crossorigin</i><i class="value">="anonymous"</i> <i class="att">referrerpolicy</i><i class="value">="no-referrer" </i><i>></i>
+        </div>
+        <p>
+            Once you're done with that, visit the <a href="https://fontawesome.com/search">font awesome search page</a>. Search whatever icon you're looking for. Click it, copy the HTML syntax and paste it in your code.
+        </p>
+        <div class="demo">
+         <i><</i><i class="tag">i</i> <i class="att">class</i><i class="value">="fa-solid fa-house"</i> <i>></i><br> <i><</i><i>/</i><i class="tag">i</i><i>></i>
+        </div>
+        <p>
+            And you'll get the icon below.
+        </p>
+        <div style="height: 200px; width: 200px; border:2px solid whitesmoke; border-radius: 15px; margin: 20px;">
+            <i class="fa-solid fa-house"  >
+</i>
+        </div>
+    </div>
+    <!-- The End -->
+    
+    
+    <div class="footer">
+        <p>If you have any issues, feel free to <a href="contact.html">contact me</a>.</p>
+    </div>
+    
+    
+    <script>
+        function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+        function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+        }
+        
+        
+   </script>
+   </body>
+</html>

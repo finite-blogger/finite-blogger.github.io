@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    background-color: #0a1927;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h1{
+    font-size: 50px;
+    color: whitesmoke;
+    font-family: "Poetsen One", sans-serif;
+}
+h3{
+    font-size: 40px;
+    color: whitesmoke;
+    font-family: "Poetsen One", sans-serif;
+}
+p{
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+
+nav{
+    border-bottom: 2px solid whitesmoke;
+    margin: 5px;
+    
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    }
+nav li{
+        height: 50px;
+}
+nav a{
+    height: 100%;
+    margin: 5px;
+    padding: 0, 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+}
+
+nav li:first-child{
+    margin-right: auto;
+    
+    display: flex;
+    font-size: 30px;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #2e2e2e6c;
+    backdrop-filter:blur(10px);
+    box-shadow: -10px,0,10px,rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 90%;
+    margin: 10px;
+    
+}
+.sidebar a{
+    width: 100%;
+}
+.boxed{
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.close{
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: -15px;
+    left: 290px;
+}
+
+li img{
+    height: 40px;
+    width: 40px;
+}
+.hideOnMobile{
+    margin: 15px;
+}
+@media(max-width:1020px){
+    .hideOnMobile{
+        display: none;
+    }
+}
+@media(min-width:1024px){
+    .hideOnDesktop{
+        display: none;
+    }
+    .demo{
+        width: 500px;
+    }
+}
+.post{
+    border: none;
+    background: #082232;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+}
+.post p{
+    color: whitesmoke;
+    font-size: 20px;
+}
+.post h2{
+    color: whitesmoke;
+}
+.btn{
+    height: 35px;
+    width: 80px;
+    border: none;
+    border-radius: 15px;
+    background: #00d5ff;
+    
+}
+.btn a{
+   color: whitesmoke; 
+   text-decoration: none;
+}
+li a{
+   color: whitesmoke; 
+   text-decoration: none; 
+   
+}
+.desc::before{
+    content: "#";
+}
+.blogContent p{
+    color: whitesmoke;
+    font-size: 17px;
+    margin: 30px;
+}
+.blogContent h2{
+    font-size: 40px;
+    color: whitesmoke;
+    font-family: "Poetsen One", sans-serif;
+    background: #082232;
+}
+.hl{
+    background: #55c1ffe4;
+    padding: 2px;
+    border-radius: 3px;
+}
+.demo{
+    height: 70px;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px;
+    background: #17395b;
+    font-size: 15px;
+    overflow-x: scroll;
+    
+}
+.demo i{
+    color: whitesmoke;
+}
+.demo .tag{
+    color: #158cff;
+}
+.demo .att{
+    color: #80ffff;
+}
+.demo .value{
+    color: goldenrod;
+}
+.footer{
+    border: none;
+    background: #082232;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+}
+
+#searchBar{
+    background: transparent;
+    height: 30px;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    font-size: 15px;
+}
+#clearBtn{
+    color: whitesmoke;
+}
