@@ -226,6 +226,17 @@ li a{
 #socials li{
     margin: 20px;
     }
+#loader{
+    height: 100vh;
+    width: 100%;
+    background: #0a1927 url("image/loader.gif") no-repeat center center;
+    background-size: 35%;
+    position: fixed;
+    z-index: 2000;
+}
+
+
+    
 @media(max-width:1020px){
     .hideOnMobile{
         display: none;
