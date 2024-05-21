@@ -52,6 +52,7 @@
     
     <div class="blogContent">
         <h2>How to add images to an HTML website</h2>
+        <button id="shareBtn">SHARE</button>
         <p>Images are a very important part of a website. They make your website more visually appealing to visitors.</p>
         <p>
             Images can be added to HTML code using the <b class="hl"><i><</i><i>img</i><i>></i></b>tag and the <b class="hl"><i>src=" "</i></b attribute.</p>
@@ -98,7 +99,26 @@
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none'
         }
-        
+        const shareBtn = document.getElementById('shareBtn')
+
+shareBtn.addEventListener('click', event => {
+
+  // Check for Web Share api support
+  if (navigator.share) {
+    // Browser supports native share api
+    navigator.share({
+      text: 'Please read this great article: ',
+      url: 'https://finite-blogger.github.io/add_images_to_website.html'
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+      .catch((err) => console.error(err));
+  } else {
+    // Fallback
+    alert("The current browser does not support the share function. Please, manually share the link")
+  }
+});
+
         
    </script>
    </body>
