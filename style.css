@@ -213,3 +213,11 @@ li a{
 #clearBtn{
     color: whitesmoke;
 }
+#shareBtn{
+    height: 35px;
+    width: 80px;
+    border: none;
+    border-radius: 15px;
+    background: #00d5ff;
+    color: whitesmoke;
+        }
