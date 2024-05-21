@@ -100,19 +100,7 @@ li img{
 .hideOnMobile{
     margin: 15px;
 }
-@media(max-width:1020px){
-    .hideOnMobile{
-        display: none;
-    }
-}
-@media(min-width:1024px){
-    .hideOnDesktop{
-        display: none;
-    }
-    .demo{
-        width: 500px;
-    }
-}
+
 .post{
     border: none;
     background: #082232;
@@ -221,3 +209,36 @@ li a{
     background: #00d5ff;
     color: whitesmoke;
         }
+#socials{
+  
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #082232;
+    height: 70px;
+    width: 250px;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+#socials li{
+    margin: 20px;
+    }
+@media(max-width:1020px){
+    .hideOnMobile{
+        display: none;
+    }
+    #socials{
+        display:none;
+}
+@media(min-width:1024px){
+    .hideOnDesktop{
+        display: none;
+    }
+    .demo{
+        width: 500px;
+    }
+    }
+    
