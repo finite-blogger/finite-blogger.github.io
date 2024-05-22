@@ -173,15 +173,21 @@ li a{
 }
 .demo i{
     color: whitesmoke;
+    font-family: "Roboto Condensed", sans-serif;
+
 }
 .demo .tag{
     color: #158cff;
+    font-family: "Roboto Condensed", sans-serif;
+
 }
 .demo .att{
     color: #80ffff;
 }
 .demo .value{
     color: goldenrod;
+    font-family: "Roboto Condensed", sans-serif;
+
 }
 .footer{
     border: none;
@@ -191,6 +197,12 @@ li a{
     padding: 15px;
     font-family: "Roboto Condensed", sans-serif;
     
+}
+.footer p{
+    font-family: "Roboto Condensed", sans-serif;
+         }
+.footer i{
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 #searchBar{
