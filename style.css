@@ -189,6 +189,8 @@ li a{
     border-radius: 10px;
     margin: 10px;
     padding: 15px;
+    font-family: "Roboto Condensed", sans-serif;
+    
 }
 
 #searchBar{
