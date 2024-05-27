@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>How to get started with web development</title>
+    
+        <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bangers&family=Lobster&family=Poetsen+One&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+    <nav>
+        <ul class="sidebar">
+   <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+</a></li>         
+   <li class="boxed"><a href="about.html">About</a></li>
+   <li class="boxed"><a href="contact.html">Contact</a></li>
+   
+    
+    <li><a href="https://x.com/finite2001?s=09"><img src="image/twitterx.png"> <p>twitter</p></a></li>
+   <li> <a href="https://t.me/finite_blogger"><img src="image/telegram.png"> <p>telegram</p></a></li>
+   <li> <a href="https://discord.com/invite/xTxA6dYx"><img src="image/discord.png"> <p>discord</p></a></li>
+   
+    <li><a href="terms.html">Terms</a></li>
+   
+   
+        </ul>
+        <ul>
+   <li><a href="index.html">Home</a></li>
+   
+   <li onclick="showSidebar()" class="hideOnDesktop"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+</a></li>    
+
+<li class="hideOnMobile"><a href="about.html">About</a></li>
+   <li class="hideOnMobile"><a href="#">Contact</a></li>
+   
+    
+    
+   
+        </ul>
+ 
+    </nav>
+    
+   <!-- BLOG CONTENT --> 
+    
+    <div class="blogContent">
+     <h2>How to get started with web development</h2>
+        <button id="shareBtn">SHARE</button>   
+        <p>To create a static website you are going to need some basic knowledge of HTML, CSS and JavaScript. You need a code editor like VsCode for computers and if you're using a mobile phone, you can use TrebEdit, Spck or Acode.</p>
+        <p>HTML<br> It stands for Hypertext Markup Language.
+        Create a file with a <i class="hl">.html</i> extension in your code editor. For example <i class="hl">index.html</i>. This file is going to contain the components of the webpage. A website can have either on or many webpages. To learn more on getting started with HTML, you can check out this <a href="html_getting_started.html">post</a>.
+        </p>
+        <p>CSS<br>
+      It stands for Cascading Style Sheets. It is used for adding styles to the components of a webpage for example background color, font size, font family and so on. It's file always has a <i class="hl">.css</i> extension. For instance <i class="hl">style.css</i>. And it can be linked to the HTML file using the <i class="hl">link</i> tag. To learn more about getting started with CSS, check out this <a href="css_getting_started.html">post</a>.
+        </p>
+        <p>JAVASCRIPT<br>
+      This is the major programming language for static websites. It is used to add interactivity to a webpage for example click events, loops, functions and so on. To add it, you have to create a <i class="hl">.js</i> file and link it to the HTML file using the <i class="hl">script</i> tag. And here is the <a href="js_getting_started.html">post</a>.
+        </p>
+    </div>
+    <!-- The End -->
+    
+    <div class="footer">
+        <p>If you have any issues, feel free to <a href="contact.html">contact me</a>.</p>
+    </div>
+    
+    
+    
+    <script>
+        function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+        function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+        }
+        
+      const shareBtn = document.getElementById('shareBtn')
+
+shareBtn.addEventListener('click', event => {
+
+  // Check for Web Share api support
+  if (navigator.share) {
+    // Browser supports native share api
+    navigator.share({
+      text: 'Please read this great article: ',
+      url: 'https://finite-blogger.github.io/getting_started.html'
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+      .catch((err) => console.error(err));
+  } else {
+    // Fallback
+    alert("The current browser does not support the share function. Please, manually share the link")
+  }
+});
+  
+   </script>
+   
+   </body>
+</html>

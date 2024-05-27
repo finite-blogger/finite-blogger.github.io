@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>How to get started with web development</title>
+    
+        <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bangers&family=Lobster&family=Poetsen+One&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+    <nav>
+        <ul class="sidebar">
+   <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+</a></li>         
+   <li class="boxed"><a href="about.html">About</a></li>
+   <li class="boxed"><a href="contact.html">Contact</a></li>
+   
+    
+    <li><a href="https://x.com/finite2001?s=09"><img src="image/twitterx.png"> <p>twitter</p></a></li>
+   <li> <a href="https://t.me/finite_blogger"><img src="image/telegram.png"> <p>telegram</p></a></li>
+   <li> <a href="https://discord.com/invite/xTxA6dYx"><img src="image/discord.png"> <p>discord</p></a></li>
+   
+    <li><a href="terms.html">Terms</a></li>
+   
+   
+        </ul>
+        <ul>
+   <li><a href="index.html">Home</a></li>
+   
+   <li onclick="showSidebar()" class="hideOnDesktop"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+</a></li>    
+
+<li class="hideOnMobile"><a href="about.html">About</a></li>
+   <li class="hideOnMobile"><a href="#">Contact</a></li>
+   
+    
+    
+   
+        </ul>
+ 
+    </nav>
+    
+   <!-- BLOG CONTENT --> 
+    
+    <div class="blogContent">
+     <h2>
+       Getting Started With CSS  
+     </h2>
+        <button id="shareBtn">SHARE</button>   
+      <p>
+      CSS stands for Cascading Style Sheets, used for structuring and styling websites. You can add CSS to HTML in three ways.
+      </p> 
+      <p>
+  The first way is to use the <i class="hl">style=" "</i> attribute in the opening tag of your element and write your CSS code inside the quotations.
+       </p>
+       <div class="demo">
+          <i><</i> <i class="tag">p</i> <i class="att">style</i><i class="value">="color: blue; background: red; "</i> <i>></i> <i>Here goes some text</i>
+          <i><</i><i>/</i><i class="tag">p</i><i>></i>
+       </div>
+      <p>The next two ways are pretty much similar. The only difference is one is used within the HTML file while the other is used in a separate file.</p>
+      <p>In your HTML file, in the <i class="hl">head</i> tag, put a <i class="hl">style</i> tag.</p>
+      <div class="demo">
+          <i><</i><i class="tag">head</i><i>></i><br>
+          <i><</i><i class="tag">title</i><i>></i><i>page title</i>
+        <i><</i><i class="tag">title</i><i>/<i>></i>   
+          <br>
+    <i><</i><i class="tag">style</i><i>></i><br>
+      <br> 
+     <i>p</i><i>{</i><br>
+     <i class="att">color</i>:<i class="value">blue</i>;<br>
+     <i class="att">background</i>:<i class="value">red</i>;<br>
+     <i>}</i>
+    <br> <i><</i><i class="tag">style</i><i>/<i>></i>  <br>
+        <i><</i><i class="tag">head</i><i>/<i>></i>  
+      </div>
+      <p>If want to write your CSS code in a separate file, you can link the HTML file to the CSS file using the <i class="hl">link</i> tag.</p>
+      <div class="demo">
+          <i><</i><i class="tag">head</i><i>></i><br>
+          <i><</i><i class="tag">title</i><i>></i><i>page title</i>
+        <i><</i><i class="tag">title</i><i>/<i>></i>   
+          <br>
+    <i><</i><i class="tag">style</i><i>></i><br>
+      <br> 
+     <i><</i><i class="tag">link</i> <i class="att">rel</i><i class="value">="stylesheet"</i> 
+     <i class="att">href</i><i class="value">="style.css"</i><i>></i>
+    <br> <i><</i><i class="tag">style</i><i>/<i>></i>  <br>
+        <i><</i><i class="tag">head</i><i>/<i>></i>  
+      </div>
+    </div>
+    <!-- The End -->
+    
+    <div class="footer">
+        <p>If you have any issues, feel free to <a href="contact.html">contact me</a>.</p>
+    </div>
+    
+    
+    
+    <script>
+        function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+        function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+        }
+        
+      const shareBtn = document.getElementById('shareBtn')
+
+shareBtn.addEventListener('click', event => {
+
+  // Check for Web Share api support
+  if (navigator.share) {
+    // Browser supports native share api
+    navigator.share({
+      text: 'Please read this great article: ',
+      url: 'https://finite-blogger.github.io/css_getting_started.html'
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+      .catch((err) => console.error(err));
+  } else {
+    // Fallback
+    alert("The current browser does not support the share function. Please, manually share the link")
+  }
+});
+  
+   </script>
+   
+   </body>
+</html>
