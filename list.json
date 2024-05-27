@@ -1,5 +1,33 @@
 [
     {
+        "title":"Getting Started with Web Development",
+        "desc":"web",
+        "explanation":"How to start your website project.",
+        "link":"getting_started.html"
+        
+    },
+    {
+        "title":"Getting Started with HTML",
+        "desc":"web",
+        "explanation":"How to create the content of your webpage.",
+        "link":"html_getting_started.html"
+        
+    },
+    {
+        "title":"Getting Started with CSS",
+        "desc":"web",
+        "explanation":"How to add style your webpage.",
+        "link":"css_getting_started.html"
+        
+    },
+    {
+        "title":"Getting Started with JavaScript",
+        "desc":"web",
+        "explanation":"How to make your webpage more interactive.",
+        "link":"js_getting_started.html"
+        
+    },
+    {
         "title":"Add images to html website",
         "desc":"html",
         "explanation":"How to add images to an HTML website.",
