@@ -40,5 +40,12 @@
         "explanation":"How to add icons to an HTML website.",
         "link":"font_awesome_icons.html"
         
+    },
+    {
+        "title":"JavaScript Variables ",
+        "desc":"js",
+        "explanation":"How to create variables in JavaScript.",
+        "link":"js_variables.html"
+        
     }
 ]
