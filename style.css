@@ -25,7 +25,9 @@ p{
     font-family: "Roboto Condensed", sans-serif;
 
 }
-
+p a{
+    color: blue;
+}
 
 nav{
     border-bottom: 2px solid whitesmoke;
