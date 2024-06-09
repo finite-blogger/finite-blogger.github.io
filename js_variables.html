@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PZVJJKJQN"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-4PZVJJKJQN'); </script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>How to create variables in JavaScript.</title>
+    
+        <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bangers&family=Lobster&family=Poetsen+One&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+    <nav>
+        <ul class="sidebar">
+   <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+</a></li>         
+   <li class="boxed"><a href="about.html">About</a></li>
+   <li class="boxed"><a href="contact.html">Contact</a></li>
+   
+    
+    <li><a href="https://x.com/finite2001?s=09"><img src="image/twitterx.png"> <p>twitter</p></a></li>
+   <li> <a href="https://t.me/finite_blogger"><img src="image/telegram.png"> <p>telegram</p></a></li>
+   <li> <a href="https://discord.com/invite/xTxA6dYx"><img src="image/discord.png"> <p>discord</p></a></li>
+   
+    <li><a href="terms.html">Terms</a></li>
+   
+   
+        </ul>
+        <ul>
+   <li><a href="index.html">Home</a></li>
+   
+   <li onclick="showSidebar()" class="hideOnDesktop"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+</a></li>    
+
+<li class="hideOnMobile"><a href="about.html">About</a></li>
+   <li class="hideOnMobile"><a href="#">Contact</a></li>
+   
+    
+    
+   
+        </ul>
+ 
+    </nav>
+    
+   <!-- BLOG CONTENT --> 
+    
+    <div class="blogContent">
+     <h2>
+      JavaScript Variables   
+     </h2>
+        <button id="shareBtn">SHARE</button>   
+      <p>
+          A variable is simply an element or a group of elements in JavaScript. Variables can be created in different ways. You can either select elements from the HTML code or create them via JavaScript.
+      </p>  
+      <p>Creating variables, we use the <i class="hl">const</i> keyword and <i class="hl">let</i> which was <i class="hl">var</i> in older versions of JavaScript.<br>
+      Const is used for variables whose values are constant while let and var are used for variables whose values can be changed.<br>
+      Properties like <i class="hl">getElementById()</i> and <i class="hl">getElementsByClassName()</i> are used to select elements from the HTML code.
+      </p>
+      <div class="demo">
+          <i><</i><i class="tag">body</i><i>></i><br>
+   <i><</i><i class="tag">div</i> <i class="att">id</i><i class="value">="text"</i><i>></i><br> <i><</i><i>/</i><i class="tag">div</i><i>></i>
+          <br>
+    <i><</i><i class="tag">script</i><i>></i><br>
+      <br> 
+     <i class="tag">let</i> <i>text</i> <i>=</i> <i class="tag">document</i><i>.</i><i class="att">getElementById</i><i>(</i><i class="value">"text"</i><i>)</i><i>;</i><br>
+     <i class="tag">text</i><i>.</i><i class="att">innerHTML</i> <i>=</i> <i>`</i><i><</i><i>p</i><i>></i><i class="value">Hello World!</i><i><</i><i>p</i><i>></i><i>`</i><i>;</i>
+    <br> <br><i><</i><i class="tag">script</i><i>/<i>></i>  <br>
+        <i><</i><i class="tag">body</i><i>/<i>></i>  
+      </div>
+    <p>The code above writes a text that says "Hello World!" in the <i class="hl">div</i> with the"id" of "text".</p>
+  <div id="result" style="height: 600px; width: 90%; background: white; color: black; border-radius: 15px; margin: 5px; padding: 15px;">
+      
+  </div>
+      
+    </div>
+    <!-- The End -->
+    
+    <div class="footer">
+        <p>If you have any issues, feel free to <a href="contact.html">contact me</a>.</p>
+    </div>
+    
+    
+    
+    <script>
+      const result = document.getElementById("result");
+ result.innerHTML = `<div>
+     Hello World!
+ </div>`
+     
+        
+        function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+        function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+        }
+        
+      const shareBtn = document.getElementById('shareBtn')
+
+shareBtn.addEventListener('click', event => {
+
+  // Check for Web Share api support
+  if (navigator.share) {
+    // Browser supports native share api
+    navigator.share({
+      text: 'Please read this great article: ',
+      url: 'https://finite-blogger.github.io/js_variables.html'
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+      .catch((err) => console.error(err));
+  } else {
+    // Fallback
+    alert("The current browser does not support the share function. Please, manually share the link")
+  }
+});
+  
+   </script>
+   
+   </body>
+</html>
